@@ -15,24 +15,3 @@
   font-family: Calibri;
   
 }
-
-.logo {
-  width: 210px;
-  margin: 8px;
-}
-
-.header {
-  grid-area: h;
-  background-color: azure; /*cadetblue;*/
-}
-
-.nav {
-  grid-area: n;
-  background-color:aquamarine;
-}
-
-
-.content {
-  grid-area: c;
-  background-color: rgb(72, 97, 209);
-}
