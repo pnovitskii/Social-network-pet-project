@@ -18,10 +18,16 @@
     line-height: 36px;
     cursor: pointer;
     user-select: none;
+    letter-spacing: 2px;
     
+    font-family: Verdana, Geneva, sans-serif;
 }
 .item:hover {
-    filter:brightness(120%);
+    background: #66ceff;
+    filter:brightness(100%);
+    -webkit-box-shadow: 0px 0px 35px -6px rgba(0,0,0,0.79); 
+    box-shadow: 0px 0px 35px -6px rgba(0,0,0,0.79);
+    
   }
 .item a {
     margin-left: 9px;
