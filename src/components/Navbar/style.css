@@ -1,0 +1,8 @@
+a {
+    margin-left: 9px;
+    text-decoration: none;
+    color: white;
+}
+.active {
+    color: gold;
+}
