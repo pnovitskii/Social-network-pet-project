@@ -2,7 +2,8 @@
     grid-area: n;
     background-color: #55acee;/*aquamarine;*/
     border-radius: 0px 0px 0px 20px;
-    
+    margin: 0 auto;
+    margin-bottom: 100px;
 }
 
 .item {
@@ -31,4 +32,6 @@
   }
 .item a {
     margin-left: 9px;
+    text-decoration: none;
+    color: white;
 }
