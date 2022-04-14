@@ -13,9 +13,7 @@ const MyPosts = () => {
       <Post name='Alex' msg="Hello! How it's goin?"/>
       <Post name='Pavel' msg="Здарова. Кд? Чд?"/>
       <Post name='James' msg="Good morning, sir!"/>
-      <Post />
-      <Post />
-      <Post />
+      
     </div>
   )
 }
