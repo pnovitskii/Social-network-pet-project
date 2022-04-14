@@ -11,7 +11,7 @@ const MyPosts = () => {
         <button>delete post</button>
       </div> */}
       <Post name='Alex' msg="Hello! How it's goin?"/>
-      <Post name='Pavel' msg="Здарова. Кд? Чд?"/>
+      <Post name='Pavel' msg="Здарова."/>
       <Post name='James' msg="Good morning, sir!"/>
       
     </div>
