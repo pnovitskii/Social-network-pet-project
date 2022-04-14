@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Header from './components/Content/Header/Header';
 import Navbar from './components/Navbar/Navbar';
@@ -23,6 +23,11 @@ function App() {
             <Route path='/settings' element={<Settings />}/>
           </Routes>
         </div>
+      </div>
+      <div className='footer'>
+        <div className='space'></div>
+        <div>2022 Pavel Novitskiy</div>
+        
       </div>
     </BrowserRouter>
   );

@@ -1,11 +1,24 @@
+@import url(https://fonts.googleapis.com/css?family=Didact+Gothic|Comfortaa:400,700&subset=latin,cyrillic);
 .logo {
-    width: 210px;
-    margin: 8px;
-    
-  }
+  width: 210px;
+  margin: 8px;
 
-  .header {
-    grid-area: h;
-    background-color: azure; /*cadetblue;*/
-    width: 1500px;
-  }
+}
+
+.header {
+  grid-area: h;
+  /* background-color: azure; */
+  /* background: rgb(232,226,136); */
+  background: white;
+  width: 1500px;
+  
+  
+  /* border: 1px solid black; */
+}
+.name {
+  font-size: 42px;
+  /* margin-left: 50%; */
+  text-align: center;
+  margin-top: 11px;
+  font-family: 'Comfortaa', cursive;
+}
