@@ -5,10 +5,10 @@
     border-radius: 0px 0px 0px 20px;
     margin: 0 auto;
     /* margin-bottom: 100px; */
-    width: 250px;
+    /* width: 250px; */
     height: 1000px;
     /* border: 1px solid white; */
-    
+    width: 100%;
 }
 
 .buttons {
@@ -56,7 +56,8 @@ a {
     
     color:white;
     /*margin-left: 7px;*/
-    width: 235px;
+    /* width: 235px; */
+    width: 100%;
     height: 36px;
     margin-bottom: 10px;
     /*box-shadow: 0 5px 0 #3C93D5;*/

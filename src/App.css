@@ -1,7 +1,7 @@
 .app-wrapper {
   margin: 0 auto;
-  width: 1500px;
-
+  /* width: 1500px; */
+  width: 77%;
   display: grid;
   
   grid-template-areas: 
@@ -32,7 +32,8 @@
 }
 
 .footer {
-  width: 1500px;
+  /* width: 1500px; */
+  width: 100%;
   height: 350px;
   /* border: 1px solid black; */
   margin: auto;
