@@ -7,13 +7,17 @@
 
 .header {
   grid-area: h;
+  /* height: 100px; */
   /* background-color: azure; */
   /* background: rgb(232,226,136); */
   background: white;
   /* width: 1500px; */
-  
-  
   /* border: 1px solid black; */
+  width: 77%;
+  position:fixed;
+  height: 65px;
+  -webkit-box-shadow: 0px 0px 35px -6px rgba(0, 0, 0, 0.79);
+  box-shadow: 0px 0px 35px -6px rgba(0, 0, 0, 0.79);
 }
 .name {
   font-size: 42px;
