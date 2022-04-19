@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+let data = [
+  {name:'Alex', message:"Hello! How it's goin?" },
+  {name:'Pavel' , message:'Здарова.' },
+  {name:'James' , message:'Good morning, sir!' }
+];
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App data={data}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
