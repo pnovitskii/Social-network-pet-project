@@ -17,11 +17,21 @@ function App(props) {
         <Navbar />
         <div className='app-wrapper-content'>
           <Routes>
-            <Route path='/profile' element={<Profile dataPosts={props.dataPosts}/>}/>
-            <Route path='/dialogs' element={<Dialogs dataDialogs={props.dataDialogs}/>}/>
-            <Route path='/news' element={<News />}/>
-            <Route path='/music' element={<Music />}/>
-            <Route path='/settings' element={<Settings />}/>
+            <Route
+              path='/profile'
+              element={<Profile dataPosts={props.state.profilePage.dataPosts} />} />
+            <Route 
+              path='/dialogs' 
+              element={<Dialogs dataDialogs={props.state.messagesPage.dataDialogs} />} />
+            <Route 
+              path='/news' 
+              element={<News />} />
+            <Route 
+              path='/music' 
+              element={<Music />} />
+            <Route 
+              path='/settings' 
+              element={<Settings />} />
           </Routes>
         </div>
       </div>
