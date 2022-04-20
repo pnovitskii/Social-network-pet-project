@@ -4,12 +4,14 @@ const DialogItem = (props) => {
     return (
         <div className={s.dialogItem}>
             <div className={s.avatar}>
-                <img src='https://cdn.impactinit.com/cdn/x/x@f59b8e3f78/smss52/smsimg30/pv/ingimagecontributors/ing_47129_23497.jpg' />
+                <img
+                    src='https://cdn.impactinit.com/cdn/x/x@f59b8e3f78/smss52/smsimg30/pv/ingimagecontributors/ing_47129_23497.jpg' 
+                    alt='avatar'/>
             </div>
-            <div>
+            <div className={s.name}>
                 {props.name}
             </div>
-            
+
         </div>
     )
 }
