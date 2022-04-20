@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Didact+Gothic|Comfortaa:400,700&subset=latin,cyrillic);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 .nav {
     grid-area: n;
     background-color: #55acee;/*aquamarine;*/
@@ -55,7 +56,7 @@
     border-radius: 10px;
     margin-right: 10px;
 }
-a {
+.buttons a {
     display: block;
     background-color: white;
     color:white;
@@ -67,7 +68,7 @@ a {
     /*box-shadow: 0 5px 0 #3C93D5;*/
     font-size: 24px;
     /* background-color:#55acee; */
-    
+    color:black;
     line-height: 36px;
     cursor: pointer;
     user-select: none;
@@ -79,7 +80,7 @@ a {
     text-align: center;
     font-family: 'Comfortaa', cursive;
 }
-a:hover {
+.nav a:hover {
     background: #66ceff;
     filter:brightness(100%);
     -webkit-box-shadow: 0px 0px 35px -6px rgba(0,0,0,0.79); 

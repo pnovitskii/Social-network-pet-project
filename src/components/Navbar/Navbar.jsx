@@ -14,9 +14,6 @@ const Navbar = () => {
         <NavLink to='/music'> Music </NavLink>
         <NavLink to='/settings'> Settings </NavLink>
       </div>
-
-
-
     </nav>
   )
 }

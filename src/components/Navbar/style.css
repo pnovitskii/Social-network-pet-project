@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-a {
+
+.Navbar_buttons__U8T\+Y a {
     margin-left: 9px;
     text-decoration: none;
     color: black;
     font-family: "Open Sans", sans-serif;
 }
-.active {
+.Navbar_buttons__U8T\+Y .active {
     color: gold;
     /* border: 1px solid white; */
     /* background: #e6e3df; */

@@ -5,8 +5,8 @@ import DialogItem from './dialogsList/dialogItem';
 
 
 const Dialogs = (props) => {
-    debugger;
-    let dialogs = props.dataDialogs.map(dialog => <DialogItem name={dialog.name} />);
+    
+    let dialogs = props.dataDialogs.map(dialog => <DialogItem id={dialog.id} name={dialog.name} />);
     
     return (
         <div className={s.dialogs}>
