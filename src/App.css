@@ -2,8 +2,9 @@
   margin: 0 auto;
   /* width: 1500px; */
   width: 85%;
+  height:fit-content;
   display: grid;
-  
+  height: 95vh;
   grid-template-areas: 
   "h h"
   "n c";
@@ -27,7 +28,8 @@
   background: rgb(63, 94, 251);
   background: linear-gradient(90deg, #55acee 0%, rgba(252, 70, 107, 1) 100%);
   /* height: 1000px; */
-  height: 800px;
+  /* height: 800px; */
+  height: 100%;
   /* margin-bottom: 100px; */
   
 }
@@ -35,16 +37,19 @@
 .footer {
   /* width: 1500px; */
   width: 100%;
-  height: 50px;
+  height: 1vh;
+  font-size: 1.5vh;
   /* border: 1px solid black; */
   margin: auto;
   vertical-align: text-bottom;
   text-align: center;
 }
 .space {
-  height: 25px;
+  height: 1vh;
   
 }
+
 body {
   overflow-y: scroll;
+  
 }
