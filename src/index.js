@@ -3,14 +3,28 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-let data = [
+let dataPosts = [
   {name:'Alex', message:"Hello! How it's goin?" },
   {name:'Pavel' , message:'Здарова.' },
   {name:'James' , message:'Good morning, sir!' }
 ];
+let dataDialogs = [
+  { name: 'Pavel' },
+  { name: 'Pavel' },
+  { name: 'Pavel' },
+  { name: 'Pavel' },
+  { name: 'Pavel' },
+  { name: 'Pavel' },
+  { name: 'Pavel' },
+  { name: 'Pavel' },
+  { name: 'Pavel' },
+  { name: 'Pavel' },
+  { name: 'Pavel' },
+  { name: 'Pavel' }
+];
 ReactDOM.render(
   <React.StrictMode>
-    <App data={data}/>
+    <App dataPosts={dataPosts} dataDialogs={dataDialogs}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

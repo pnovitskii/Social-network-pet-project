@@ -2,23 +2,12 @@ import React from 'react';
 import s from './Dialogs.module.css'
 import DialogItem from './dialogsList/dialogItem';
 
-let data = [
-    { name: 'Pavel' },
-    { name: 'Pavel' },
-    { name: 'Pavel' },
-    { name: 'Pavel' },
-    { name: 'Pavel' },
-    { name: 'Pavel' },
-    { name: 'Pavel' },
-    { name: 'Pavel' },
-    { name: 'Pavel' },
-    { name: 'Pavel' },
-    { name: 'Pavel' },
-    { name: 'Pavel' }
-];
+
 
 const Dialogs = (props) => {
-    let dialogs = data.map(dialog => <DialogItem name={dialog.name} />);
+    debugger;
+    let dialogs = props.dataDialogs.map(dialog => <DialogItem name={dialog.name} />);
+    
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsList}>

@@ -6,7 +6,7 @@ import Post from './Post/Post'
 
 
 const MyPosts = (props) => {
-  let posts = props.data.map(post => <Post name={post.name} msg={post.message}/>);
+  let posts = props.dataPosts.map(post => <Post name={post.name} msg={post.message}/>);
   return (
     <div className={s.posts}>
       {/* My posts */}
