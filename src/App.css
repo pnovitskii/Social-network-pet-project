@@ -1,6 +1,5 @@
 .app-wrapper {
   margin: 0 auto;
-  /* width: 1500px; */
   width: 85%;
   height:fit-content;
   display: grid;
@@ -8,48 +7,35 @@
   grid-template-areas: 
   "h h"
   "n c";
-
   grid-template-rows: 6.9vh 1fr;
   grid-template-columns: 2fr 10fr;
-  /*grid-gap: 10px;*/
   font-size: 20px;
   font-family: Calibri;
   -webkit-box-shadow: 0px 0px 35px -6px rgba(0,0,0,0.79); 
   box-shadow: 0px 0px 35px -6px rgba(0,0,0,0.79);
-
   border-radius: 0px 0px 20px 20px;
 }
 
 .app-wrapper-content {
-  
   grid-area: c;
-  /*background-color: rgb(72, 97, 209);*/
   border-radius: 0px 0px 20px 0px;
   background: rgb(63, 94, 251);
   background: linear-gradient(90deg, #55acee 0%, rgba(252, 70, 107, 1) 100%);
-  /* height: 1000px; */
-  /* height: 800px; */
   height: 100%;
-  /* margin-bottom: 100px; */
-  
 }
 
 .footer {
-  /* width: 1500px; */
   width: 100%;
   height: 1vh;
   font-size: 1.5vh;
-  /* border: 1px solid black; */
   margin: auto;
   vertical-align: text-bottom;
   text-align: center;
 }
 .space {
   height: 1vh;
-  
 }
 
 body {
   overflow-y: scroll;
-  
 }

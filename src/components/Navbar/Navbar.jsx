@@ -6,8 +6,8 @@ import './style.css';
 
 const Navbar = () => {
   return (
-    <nav className={s.nav}>
-      <div className={s.buttons}>
+    <nav className='nav'>
+      <div className='buttons'>
         <NavLink to='/profile'> Profile </NavLink>
         <NavLink to='/dialogs'> Messages </NavLink>
         <NavLink to='/news'> News </NavLink>
