@@ -5,6 +5,15 @@
     color: black;
     font-family: "Open Sans", sans-serif;
 }
+.Navbar_buttons__qxEaW a {
+    margin-left: 9px;
+    text-decoration: none;
+    color: black;
+    font-family: "Open Sans", sans-serif;
+}
+.Navbar_buttons__qxEaW .active {
+    color: gold;
+}
 .Navbar_buttons__U8T\+Y .active {
     color: gold;
     /* border: 1px solid white; */
