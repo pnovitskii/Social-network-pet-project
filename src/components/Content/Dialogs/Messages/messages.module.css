@@ -3,10 +3,11 @@
     /* padding: 10px; */
     /* border: 1px solid black; */
     font-family: 'Montserrat', sans-serif;
+    /* margin: 0; */
 }
 .messages {
     /* border: 1px solid black; */
-    height:67vh;
+    height:68.8vh;
     /* border-radius: 20px 20px 0px 0px; */
     margin-top: 1vh;
     margin-right: 1vh;
@@ -18,7 +19,7 @@
     /* border: 1px solid black; */
     border-radius: 10px;
     width: fit-content;
-    margin-top: 15px;
+    margin-top: 10px;
     margin-left: 1vh;
     margin-right: 1vh;
     /* margin-bottom: 15px; */
@@ -27,43 +28,62 @@
     /* background-color: black; */
 }
 .text {
-    margin-left: 8px;
-    margin-right: 8px;
+    /* margin-left: 8px; */
+    /* margin-right: 8px; */
+    padding: 8px;
     /* margin-top: 15px; */
-    font-size: 25px;
+    font-size: 20px;
     color: white;
 }
 .textInput {
-    /* border: 1px solid black; */
-    border-radius: 20px;
-    height: 9vh;
+    border: 1px solid gainsboro;
+    border-radius: 25px;
+    margin-left: 1vh;
+    margin-right: 1vh;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 7vh;
+    /* width: 90%; */
     /* margin-top: 1.31vh; */
     /* margin-left: 1vh; */
     /* margin-right: 1vh; */
     /* margin-bottom: 2vh; */
     /* margin-bottom: 10px; */
     align-items: center;
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    margin-top: 2vh;
+    /* background-color: aqua; */
 }
 .input {
-    width: 97.2%;
-    height: 90%;
-    margin-right: 10px;
-    margin-left: 10px;
-    
+    /* width: 70%; */
+    height: 6vh;
+    /* margin-right: 10px; */
+    /* margin-left: 10px; */
+    /* display:inline-block; */
     outline: none;
-    /* border: none; */
+    border: none;
     font-size: 25px;
-    margin-top: 2vh;
+    /* background: black; */
     font-family: 'Montserrat', sans-serif;
     color:black;
-    border: 1px solid black;
-    border-radius: 10px;
+    /* border: 1px solid black; */
+    
+    /* border-radius: 10px; */
 }
 input, select{
     color: black;
     font-weight: 800;
 }
-
+.button {
+    /* border: 1px solid black; */
+    /* background: black; */
+    height: 8vh;
+    vertical-align: middle;
+    /* margin-top: 2vh; */
+    /* border-radius: 10px; */
+}
 .space {
     height: 2px;
 }
+
