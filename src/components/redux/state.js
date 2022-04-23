@@ -9,17 +9,17 @@ let state = {
   messagesPage: {
     dataDialogs: [
       { id: '0', name: 'Pavel' },
-      { id: '1', name: 'Pavel' },
-      { id: '2', name: 'Pavel' },
-      { id: '3', name: 'Pavel' },
-      { id: '4', name: 'Pavel' },
-      { id: '5', name: 'Pavel' },
-      { id: '6', name: 'Pavel' },
-      { id: '7', name: 'Pavel' },
-      { id: '8', name: 'Pavel' },
-      { id: '9', name: 'Pavel' },
-      { id: '10', name: 'Pavel' },
-      { id: '11', name: 'Pavel' }
+      { id: '1', name: 'James' },
+      { id: '2', name: 'Влад' },
+      { id: '3', name: 'Витёк' },
+      { id: '4', name: 'Антон' },
+      { id: '5', name: 'Kavo' },
+      { id: '6', name: 'Ladno' },
+      { id: '7', name: 'Себек' },
+      // { id: '8', name: 'Pavel' },
+      // { id: '9', name: 'Pavel' },
+      // { id: '10', name: 'Pavel' },
+      // { id: '11', name: 'Pavel' }
     ],
     dataMessages: [
       { text: 'Ладно' },
