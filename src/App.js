@@ -10,6 +10,7 @@ import Music from './components/Content/Music/Music';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App(props) {
+  
   return (
     <BrowserRouter>
       <div className="app-wrapper">
@@ -20,17 +21,17 @@ function App(props) {
             <Route
               path='/profile'
               element={<Profile dataPosts={props.state.profilePage.dataPosts} />} />
-            <Route 
-              path='/dialogs/*' 
-              element={<Dialogs dataDialogs={props.state.messagesPage.dataDialogs} />} />
-            <Route 
-              path='/news' 
+            <Route
+              path='/dialogs/*'
+              element={<Dialogs state={props.state.messagesPage} />} />
+            <Route
+              path='/news'
               element={<News />} />
-            <Route 
-              path='/music' 
+            <Route
+              path='/music'
               element={<Music />} />
-            <Route 
-              path='/settings' 
+            <Route
+              path='/settings'
               element={<Settings />} />
           </Routes>
         </div>
