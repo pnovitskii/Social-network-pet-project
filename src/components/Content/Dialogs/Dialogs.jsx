@@ -6,7 +6,7 @@ import Messages from './Messages/Messages';
 
 const Dialogs = (props) => {
     let dialogs = props.state.dataDialogs.map(dialog => <DialogItem id={dialog.id} name={dialog.name} />);
-    
+
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsList}>
@@ -19,7 +19,7 @@ const Dialogs = (props) => {
                 <div className={s.bot}></div>
             </div>
             <div className={s.dialogMessages}>
-                <Messages dataMessages={props.state.dataMessages}/>
+                <Messages dataMessages={props.state.dataMessages} addMessage={props.addMessage}/>
             </div>
         </div>
     )

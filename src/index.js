@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import state from './components/redux/state';
+import state from './redux/state';
+import { addMessage } from './redux/state';
+
+addMessage('лол');
 
 ReactDOM.render(
   <React.StrictMode>
-    <App state={state}/>
+    <App state={state} addMessage={addMessage}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

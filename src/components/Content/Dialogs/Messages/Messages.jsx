@@ -14,6 +14,7 @@ const Message = (props) => {
 };
 const Messages = (props) => {
     let messages = props.dataMessages.map(message => <Message text={message.text} />)
+
     return (
         <div className={s.body}>
             <div className={s.messages}>
@@ -21,10 +22,12 @@ const Messages = (props) => {
             </div>
 
             <div className={s.textInput}>
-                <input type='text' spellcheck='false' className={s.input} placeholder='Напишите сообщение...'></input>
-                <span className="material-symbols-outlined">
+                <input ref={newPostElement} type='text' spellcheck='false' className={s.input} placeholder='Напишите сообщение...'></input>
+
+                <span className="material-symbols-outlined" onClick={ sendMessage }>
                     send
                 </span>
+
             </div>
         </div>
     )

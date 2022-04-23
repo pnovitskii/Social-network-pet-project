@@ -41,5 +41,8 @@ let state = {
     ]
   }
 };
-
+export let addMessage = (textMessage) => {
+  let newMessage = { text: textMessage };
+  state.messagesPage.dataMessages.unshift(newMessage);
+}
 export default state;

@@ -72,14 +72,7 @@ input, select{
     color: black;
     font-weight: 800;
 }
-.button {
-    /* border: 1px solid black; */
-    /* background: black; */
-    height: 8vh;
-    vertical-align: middle;
-    /* margin-top: 2vh; */
-    /* border-radius: 10px; */
-}
+
 .space {
     height: 2px;
 }
