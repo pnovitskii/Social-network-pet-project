@@ -12,9 +12,19 @@ const Message = (props) => {
         </div>
     )
 };
+
 const Messages = (props) => {
     let messages = props.dataMessages.map(message => <Message text={message.text} />)
-
+    let newMessage = React.createRef();
+    let sendMessage = () => {
+        let text = newMessage.current.value;
+        if (text === '') return;
+        props.addMessage(text);
+        newMessage.current.value = '';
+    };
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') sendMessage();
+    }
     return (
         <div className={s.body}>
             <div className={s.messages}>
@@ -22,7 +32,7 @@ const Messages = (props) => {
             </div>
 
             <div className={s.textInput}>
-                <input ref={newPostElement} type='text' spellcheck='false' className={s.input} placeholder='Напишите сообщение...'></input>
+                <input onKeyDown={handleKeyDown} ref={newMessage} type='text' spellcheck='false' className={s.input} placeholder='Напишите сообщение...'></input>
 
                 <span className="material-symbols-outlined" onClick={ sendMessage }>
                     send
