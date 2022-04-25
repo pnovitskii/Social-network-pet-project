@@ -8,15 +8,20 @@
 }
 .buttons {
     margin-top: 30px;
-    position: fixed;
-    width: 11.3%;
-    margin-left: 0.5%;
+    /* position: fixed; */
+    /* width: 11.3%; */
+    /* min-width: 50px; */
+    width: 80%;
+    /* max-width: 170px; */
+    /* margin-left: 0.5%; */
+    margin-left: auto;
+    margin-right: auto;
 }
 .buttons a {
     display: block;
     background-color: white;
     color:white;
-    width: 90%;
+    /* width: 90%; */
     height: 36px;
     margin-bottom: 10px;
     font-size: 24px;
@@ -38,7 +43,8 @@
 }
 /* ////////////////////////////////////////// */
 .nav .buttons a {
-    margin-left: 9px;
+    /* margin-left: 9px; */
+    margin-right: 0;
     text-decoration: none;
     color: black;
     font-family: "Open Sans", sans-serif;
