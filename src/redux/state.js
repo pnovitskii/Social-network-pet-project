@@ -18,34 +18,20 @@ let state = {
       { id: '5', name: 'Kavo' },
       { id: '6', name: 'Ladno' },
       { id: '7', name: 'Себек' },
-      // { id: '8', name: 'Pavel' },
-      // { id: '9', name: 'Pavel' },
-      // { id: '10', name: 'Pavel' },
-      // { id: '11', name: 'Pavel' }
     ],
-    dataMessages: [
-      // { text: 'Ладно' },
-      // { text: 'Здарова, челик... Кд? Чд?' },
-      // { text: 'Hello!' },
-      // { text: 'Привет!' },
-      // { text: 'The quick brown fox jumps over the lazy dog.' },
-      // { text: 'В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!аааааааааааа аааааааа ааааааааааа аааааааа ааааааааа ааааааааа аааааа ааааааа аааааааа аааааааа ааааа аааааа аааааааа аааааааа' },
-      // { text: 'The quick brown fox jumps over the lazy dog.' },
-      // { text: 'В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!' },
-      // { text: 'The quick brown fox jumps over the lazy dog.' },
-      // { text: 'В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!' },
-      // { text: 'The quick brown fox jumps over the lazy dog.' },
-      // { text: 'В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!' },
-      // { text: 'The quick brown fox jumps over the lazy dog.' },
-      // { text: 'В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!' },
-      // { text: 'The quick brown fox jumps over the lazy dog.' },
-      // { text: 'В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!' }
-    ]
+    dataMessages: [ ],
+    newTextMessage: '' 
   }
 };
-export let addMessage = (textMessage) => {
-  let newMessage = { text: textMessage };
+export let addMessage = () => {
+  if ( state.messagesPage.newTextMessage == '' ) return;
+  let newMessage = { text: state.messagesPage.newTextMessage };
   state.messagesPage.dataMessages.unshift(newMessage);
+  state.messagesPage.newTextMessage = '';
+  rerenderEntireTree(state);
+}
+export let updateTextMessage = (text) => {
+  state.messagesPage.newTextMessage = text;
   rerenderEntireTree(state);
 }
 export default state;

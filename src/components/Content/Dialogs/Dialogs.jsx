@@ -19,7 +19,7 @@ const Dialogs = (props) => {
                 <div className={s.bot}></div>
             </div>
             <div className={s.dialogMessages}>
-                <Messages dataMessages={props.state.dataMessages} addMessage={props.addMessage}/>
+                <Messages dataMessages={props.state.dataMessages} newTextMessage={props.state.newTextMessage} addMessage={props.addMessage} updateTextMessage={props.updateTextMessage}/>
             </div>
         </div>
     )

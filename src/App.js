@@ -24,7 +24,7 @@ function App(props) {
                 element={<Profile dataPosts={props.state.profilePage.dataPosts} />} />
               <Route
                 path='/dialogs/*'
-                element={<Dialogs state={props.state.messagesPage} addMessage={props.addMessage} />} />
+                element={<Dialogs state={props.state.messagesPage} addMessage={props.addMessage} updateTextMessage={props.updateTextMessage}/>} />
               <Route
                 path='/news'
                 element={<News />} />

@@ -1,30 +1,15 @@
 import React from 'react';
+import Message from './Message/Message';
 import s from './messages.module.css';
 
-const Message = (props) => {
-    return (
-        <div className={s.message}>
-            {/* <div className={s.space}></div> */}
-            <div className={s.text}>
-                {props.text}
-            </div>
-            {/* <div className={s.space}></div> */}
-        </div>
-    )
-};
-
 const Messages = (props) => {
-    let messages = props.dataMessages.map(message => <Message text={message.text} />)
+    let messages = props.dataMessages.map(message => <Message text={message.text} />);
     let newMessage = React.createRef();
-    let sendMessage = () => {
+    let updateTextMessage = () => {
         let text = newMessage.current.value;
-        if (text === '') return;
-        props.addMessage(text);
-        newMessage.current.value = '';
-    };
-    const handleKeyDown = (e) => {
-        if (e.key === 'Enter') sendMessage();
+        props.updateTextMessage(text);
     }
+    const handleKeyDown = (e) => { if (e.key === 'Enter') props.addMessage(); }
     return (
         <div className={s.body}>
             <div className={s.messages}>
@@ -32,9 +17,18 @@ const Messages = (props) => {
             </div>
 
             <div className={s.textInput}>
-                <input onKeyDown={handleKeyDown} ref={newMessage} type='text' spellcheck='false' className={s.input} placeholder='Напишите сообщение...'></input>
+                <input
+                    onKeyDown={handleKeyDown}
+                    ref={newMessage}
+                    type='text'
+                    spellcheck='false'
+                    className={s.input}
+                    placeholder='Напишите сообщение...'
+                    value={props.newTextMessage}
+                    onChange={updateTextMessage}>
+                </input>
 
-                <span className="material-symbols-outlined" onClick={ sendMessage }>
+                <span className="material-symbols-outlined" onClick={props.addMessage}>
                     send
                 </span>
 
