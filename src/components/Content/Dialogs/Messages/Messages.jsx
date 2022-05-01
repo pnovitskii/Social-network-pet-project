@@ -1,4 +1,5 @@
 import React from 'react';
+import { addMessageActionCreator, updateMessageTextActionCreator } from '../../../../redux/state';
 import Message from './Message/Message';
 import s from './messages.module.css';
 
@@ -8,10 +9,13 @@ const Messages = (props) => {
     let newMessage = React.createRef();
     let updateTextMessage = () => {
         let text = newMessage.current.value;
-        // props.updateTextMessage(text);
-        props.dispatch( { type: 'UPDATE-MESSAGE-TEXT', text: text } );
+        let action = updateMessageTextActionCreator(text);
+        props.dispatch( action );
     }
-    const handleKeyDown = (e) => { if (e.key === 'Enter') props.dispatch( { type: 'ADD-MESSAGE' } ) };
+    let addMessage = () => {
+        props.dispatch(addMessageActionCreator());
+    }
+    const handleKeyDown = (e) => { if (e.key === 'Enter') addMessage() };
     
     return (
         <div className={s.body}>
@@ -31,7 +35,7 @@ const Messages = (props) => {
                     onChange={updateTextMessage}>
                 </input>
 
-                <span className="material-symbols-outlined" onClick={()=>props.dispatch({type: 'ADD-MESSAGE'})}>
+                <span className="material-symbols-outlined" onClick={addMessage}>
                     send
                 </span>
 
