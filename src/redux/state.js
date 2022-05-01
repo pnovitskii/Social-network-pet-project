@@ -6,7 +6,7 @@ let store = {
         { name: 'Pavel', message: 'Здарова.' },
         { name: 'James', message: 'Good morning, sir!' }
       ],
-      newPostText: 'zdarov'
+      newPostText: ''
     },
     messagesPage: {
       dataDialogs: [
