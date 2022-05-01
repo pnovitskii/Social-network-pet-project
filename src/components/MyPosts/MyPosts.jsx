@@ -4,13 +4,17 @@ import Post from './Post/Post'
 
 const MyPosts = (props) => {
   let addPost = () => {
-    let text = newPost.current.value;
-    props.addPost(text);
-    newPost.current.value = '';
+    // let text = newPost.current.value;
+    // props.addPost(text);
+    let action = {type: 'ADD-POST'};
+    props.dispatch(action);
+    // newPost.current.value = '';
   };
   let updatePostText = () => {
     let text = newPost.current.value;
-    props.updatePostText(text);
+    let action = {type: 'UPDATE-POST-TEXT', text: text}
+    // props.updatePostText(text);
+    props.dispatch(action);
   }
   let newPost = React.createRef();
   let posts = props.state.dataPosts.map(post => <Post name={post.name} msg={post.message} />);

@@ -3,15 +3,16 @@ import Message from './Message/Message';
 import s from './messages.module.css';
 
 const Messages = (props) => {
-    let messages = props.dataMessages.map(message => <Message text={message.text} />);
+    
+    let messages = props.state.dataMessages.map( message => <Message text={message.text} />);
     let newMessage = React.createRef();
     let updateTextMessage = () => {
-        
         let text = newMessage.current.value;
-        props.updateTextMessage(text);
-        
+        // props.updateTextMessage(text);
+        props.dispatch( { type: 'UPDATE-MESSAGE-TEXT', text: text } );
     }
-    const handleKeyDown = (e) => { if (e.key === 'Enter') props.addMessage(); }
+    const handleKeyDown = (e) => { if (e.key === 'Enter') props.dispatch( { type: 'ADD-MESSAGE' } ) };
+    
     return (
         <div className={s.body}>
             <div className={s.messages}>
@@ -26,11 +27,11 @@ const Messages = (props) => {
                     spellcheck='false'
                     className={s.input}
                     placeholder='Напишите сообщение...'
-                    value={props.newTextMessage}
+                    value={props.state.newTextMessage}
                     onChange={updateTextMessage}>
                 </input>
 
-                <span className="material-symbols-outlined" onClick={props.addMessage}>
+                <span className="material-symbols-outlined" onClick={()=>props.dispatch({type: 'ADD-MESSAGE'})}>
                     send
                 </span>
 

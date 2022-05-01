@@ -19,40 +19,57 @@ let store = {
         { id: '6', name: 'Ladno' },
         { id: '7', name: 'Себек' },
       ],
-      dataMessages: [ ],
-      newTextMessage: '' 
+      dataMessages: [],
+      newTextMessage: ''
     }
   },
-  getState() { return this._state},
+  getState() { return this._state },
   rerenderEntireTree() {
     console.log('state changed');
   },
-  addPost(text) {
-    if (text == '') return;
-    let newPost = {
-      name: 'Pavel',
-      message: text
-    }
-    this._state.profilePage.dataPosts.unshift(newPost);
-    this.rerenderEntireTree(this._state);
-    this._state.profilePage.newPostText = '';
+  subscribe(observer) { this.rerenderEntireTree = observer; },
+  addPost() {
+
   },
   updatePostText(text) {
     this._state.profilePage.newPostText = text;
     this.rerenderEntireTree(this._state);
   },
   addMessage() {
-    if ( this._state.messagesPage.newTextMessage == '' ) return;
-    let newMessage = { text: this._state.messagesPage.newTextMessage };
-    this._state.messagesPage.dataMessages.unshift(newMessage);
-    this._state.messagesPage.newTextMessage = '';
-    this.rerenderEntireTree(this._state);
+
+
   },
   updateTextMessage(text) {
-    this._state.messagesPage.newTextMessage = text;
-    this.rerenderEntireTree(this._state);
+
   },
-  subscribe( observer ) {this.rerenderEntireTree = observer; }
+  dispatch(action) {
+    if (action.type === 'ADD-POST') {
+      if (this._state.profilePage.newPostText === '') return;
+      let newPost = {
+        name: 'Pavel',
+        message: this._state.profilePage.newPostText
+      }
+      this._state.profilePage.dataPosts.unshift(newPost);
+      this.rerenderEntireTree(this._state);
+      this._state.profilePage.newPostText = '';
+    }
+    else if (action.type === 'UPDATE-POST-TEXT') {
+      this.updatePostText(action.text);
+    }
+
+    else if (action.type === 'ADD-MESSAGE') {
+      if (this._state.messagesPage.newTextMessage === '') return;
+      let newMessage = { text: this._state.messagesPage.newTextMessage };
+      this._state.messagesPage.dataMessages.unshift(newMessage);
+      this._state.messagesPage.newTextMessage = '';
+      this.rerenderEntireTree(this._state);
+    }
+
+    else if (action.type === 'UPDATE-MESSAGE-TEXT') {
+      this._state.messagesPage.newTextMessage = action.text;
+      this.rerenderEntireTree(this._state);
+    }
+  }
 };
 
 export default store;
