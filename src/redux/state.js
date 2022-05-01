@@ -5,7 +5,8 @@ let store = {
         { name: 'Alex', message: "Hello! How it's goin?" },
         { name: 'Pavel', message: 'Здарова.' },
         { name: 'James', message: 'Good morning, sir!' }
-      ]
+      ],
+      newPostText: 'zdarov'
     },
     messagesPage: {
       dataDialogs: [
@@ -34,7 +35,11 @@ let store = {
     }
     this._state.profilePage.dataPosts.unshift(newPost);
     this.rerenderEntireTree(this._state);
-    debugger;
+    this._state.profilePage.newPostText = '';
+  },
+  updatePostText(text) {
+    this._state.profilePage.newPostText = text;
+    this.rerenderEntireTree(this._state);
   },
   addMessage() {
     if ( this._state.messagesPage.newTextMessage == '' ) return;
@@ -44,13 +49,10 @@ let store = {
     this.rerenderEntireTree(this._state);
   },
   updateTextMessage(text) {
-    
     this._state.messagesPage.newTextMessage = text;
     this.rerenderEntireTree(this._state);
   },
-  subscribe( observer ) {
-    this.rerenderEntireTree = observer;
-  }
+  subscribe( observer ) {this.rerenderEntireTree = observer; }
 };
 
 export default store;
