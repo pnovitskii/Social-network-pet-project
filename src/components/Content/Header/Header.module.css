@@ -1,4 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Didact+Gothic|Comfortaa:400,700&subset=latin,cyrillic);
+@media only screen and (max-width: 1100px) {
+  .header{
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .header{
+    width: 85%;
+  }
+}
 .logo {
   width: 210px;
   margin: 8px;
@@ -13,7 +23,7 @@
   background: white;
   /* width: 1500px; */
   /* border: 1px solid black; */
-  width: 85%;
+  /* width: 85%; */
   max-width: 1935px;
   position:fixed;
   /* height: 6.9vh; */
