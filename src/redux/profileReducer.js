@@ -3,8 +3,15 @@ const UPDATE_POST_TEXT = 'UPDATE-POST-TEXT';
 
 export const addPostActionCreator = () => ({ type: ADD_POST });
 export const updatePostTextActionCreator = (text) => ({ type: UPDATE_POST_TEXT, text: text });
-
-const profileReducer = (action, state) => {
+let initialState = {
+    dataPosts: [
+        { name: 'Alex', message: "Hello! How it's goin?" },
+        { name: 'Pavel', message: 'Здарова.' },
+        { name: 'James', message: 'Good morning, sir!' }
+      ],
+      newPostText: ''
+};
+const profileReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_POST:
             if (state.newPostText === '') return state;

@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import store from './redux/store';
+import store from './redux/redux-store';
 
 let rerenderEntireTree = () => {
     ReactDOM.render(
         <React.StrictMode>
             <App
+                store={store}
                 state={store.getState()}
                 // addMessage={store.addMessage.bind(store)}
                 // updateTextMessage={store.updateTextMessage.bind(store)}
