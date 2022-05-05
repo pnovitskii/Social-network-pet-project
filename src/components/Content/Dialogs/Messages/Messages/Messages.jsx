@@ -1,20 +1,16 @@
 import React from 'react';
-import { addMessageActionCreator, updateMessageTextActionCreator } from '../../../../../redux/messagesReducer';
-import Message from '../Message/Message';
+//import { addMessageActionCreator, updateMessageTextActionCreator } from '../../../../../redux/messagesReducer';
+import Message from './Message/Message';
 import s from './messages.module.css';
 
 const Messages = (props) => {
-    
-    let messages = props.state.dataMessages.map( message => <Message text={message.text} />);
+    let messages = props.messages.map( message => <Message text={message.text} />);
     let newMessage = React.createRef();
     let updateTextMessage = () => {
         let text = newMessage.current.value;
-        let action = updateMessageTextActionCreator(text);
-        props.dispatch( action );
+        props.updateTextMessage(text);
     }
-    let addMessage = () => {
-        props.dispatch(addMessageActionCreator());
-    }
+    let addMessage = () => props.addMessage();
     const handleKeyDown = (e) => { if (e.key === 'Enter') addMessage() };
     
     return (
@@ -31,7 +27,7 @@ const Messages = (props) => {
                     spellcheck='false'
                     className={s.input}
                     placeholder='Напишите сообщение...'
-                    value={props.state.newTextMessage}
+                    value={props.newTextMessage}
                     onChange={updateTextMessage}>
                 </input>
 
