@@ -8,9 +8,7 @@ const MessagesContainer = (props) => {
         let action = updateMessageTextActionCreator(text);
         props.store.dispatch(action);
     }
-    let addMessage = () => {
-        props.store.dispatch(addMessageActionCreator());
-    }
+    let addMessage = () => props.store.dispatch(addMessageActionCreator());
 
     return (
         <Messages
