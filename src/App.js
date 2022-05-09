@@ -40,7 +40,7 @@ function App(props) {
       </div>
       <div className='footer'>
         <div className='space'></div>
-        <div>© 2022 Pavel Novitskiy</div>
+        <div className='footer-text'>© 2022 Pavel Novitskiy</div>
       </div>
     </BrowserRouter>
   );
