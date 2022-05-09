@@ -1,3 +1,14 @@
+@media only screen and (max-width: 700px) {
+    .nav .buttons a {
+        font-size: 12px;
+        /* height: 20px; */
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    
+}
+
 .nav {
     grid-area: n;
     /* background-color: #55acee;aquamarine; */
@@ -6,6 +17,7 @@
     height: 100%;
     width: 100%;
 }
+
 .buttons {
     margin-top: 30px;
     /* position: fixed; */
@@ -17,16 +29,19 @@
     margin-left: auto;
     margin-right: auto;
 }
+
 .buttons a {
     display: block;
     background-color: white;
-    color:white;
+    color: white;
     /* width: 90%; */
-    height: 36px;
+    height: fit-content;
+    /* padding-top: 1px; */
+    /* padding-bottom: 1px; */
     margin-bottom: 10px;
     font-size: 24px;
-    color:black;
-    line-height: 36px;
+    color: black;
+    /* line-height: 36px; */
     cursor: pointer;
     user-select: none;
     letter-spacing: 2px;
@@ -35,12 +50,14 @@
     text-align: center;
     font-family: 'Comfortaa', cursive;
 }
+
 .nav a:hover {
     background: #66ceff;
-    filter:brightness(100%);
-    -webkit-box-shadow: 0px 0px 35px -6px rgba(0,0,0,0.79); 
-    box-shadow: 0px 0px 35px -6px rgba(0,0,0,0.79);
+    filter: brightness(100%);
+    -webkit-box-shadow: 0px 0px 35px -6px rgba(0, 0, 0, 0.79);
+    box-shadow: 0px 0px 35px -6px rgba(0, 0, 0, 0.79);
 }
+
 /* ////////////////////////////////////////// */
 .nav .buttons a {
     /* margin-left: 9px; */
@@ -49,9 +66,10 @@
     color: black;
     font-family: "Open Sans", sans-serif;
     overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
+
 /* .Navbar_buttons__qxEaW a {
     margin-left: 9px;
     text-decoration: none;

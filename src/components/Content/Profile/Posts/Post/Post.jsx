@@ -9,8 +9,11 @@ const Post = (props) => {
                 alt=''
             />
             </div>
-            <p className={s.name}>{props.name}</p>
-            <p className={s.message}>{props.msg}</p>
+            <div className={s.body}>
+                <p className={s.name}>{props.name}</p>
+                <p className={s.message}>{props.msg}</p>
+            </div>
+            
         </div>
     )
 }
