@@ -3,7 +3,8 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_POST_TEXT = 'UPDATE-POST-TEXT';
 
-export const addPostActionCreator = (name) => ({ type: ADD_POST, name: name });
+export const addPostWithNameActionCreator = (name) => ({ type: ADD_POST, name: name });
+export const addPostActionCreator = () => ({ type: ADD_POST, name: 'Pavel' });
 export const updatePostTextActionCreator = (text) => ({ type: UPDATE_POST_TEXT, text: text });
 
 
@@ -23,10 +24,11 @@ let initialState = {
 const profileReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_POST: {
+            debugger;
             if (state.newPostText === '') return state;
             return {
                 ...state,
-                dataPosts: [ { name: action.name === undefined ? 'Pavel' : action.name , message: state.newPostText }, ...state.dataPosts ],
+                dataPosts: [ { name: action.name, message: state.newPostText }, ...state.dataPosts ],
                 newPostText: ''
             }
         }

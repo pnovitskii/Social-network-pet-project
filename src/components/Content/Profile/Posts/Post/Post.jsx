@@ -10,8 +10,10 @@ const Post = (props) => {
             />
             </div>
             <div className={s.body}>
-                <p className={s.name}>{props.name}</p>
-                <p className={s.message}>{props.msg}</p>
+                <div><p className={s.name}>{props.name}</p></div>
+                <div><p className={s.message}>{props.msg}</p></div>
+                
+                
             </div>
             
         </div>

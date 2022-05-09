@@ -17,7 +17,7 @@ const MyPosts = (props) => {
     
       axios.get('https://favqs.com/api/qotd').then(response => {
         props.updatePostText(response.data.quote.body);
-        props.addPost(response.data.quote.author);
+        props.addQuote(response.data.quote.author);
       });
     
 
