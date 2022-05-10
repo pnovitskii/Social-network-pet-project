@@ -21,7 +21,7 @@
 }
 .item {
     display: grid;
-    
+    max-width: 550px;
     height: fit-content;
     padding-bottom: 15px;
     padding-right: 10px;
