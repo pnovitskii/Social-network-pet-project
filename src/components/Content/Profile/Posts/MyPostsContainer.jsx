@@ -3,12 +3,9 @@ import MyPosts from './MyPosts/MyPosts';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => {
-    
-    
     return {
         dataPosts: state.profilePage.dataPosts,
-        newPostText: state.profilePage.newPostText,
-        
+        newPostText: state.profilePage.newPostText, 
     }
 }
 

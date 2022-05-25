@@ -1,15 +1,9 @@
-
-
 const ADD_POST = 'ADD-POST';
 const UPDATE_POST_TEXT = 'UPDATE-POST-TEXT';
 
 export const addPostWithNameActionCreator = (name) => ({ type: ADD_POST, name: name });
 export const addPostActionCreator = () => ({ type: ADD_POST, name: 'Pavel' });
 export const updatePostTextActionCreator = (text) => ({ type: UPDATE_POST_TEXT, text: text });
-
-
-
-
 
 let initialState = {
     dataPosts: [
